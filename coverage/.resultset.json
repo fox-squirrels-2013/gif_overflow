@@ -1,0 +1,73 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/Users/Louie/Documents/Programming/gif_overflow/app/controllers/application_controller.rb": [
+        1,
+        1,
+        null
+      ],
+      "/Users/Louie/Documents/Programming/gif_overflow/app/helpers/application_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/Louie/Documents/Programming/gif_overflow/app/controllers/gifcomments_controller.rb": [
+        1,
+        1,
+        null,
+        null,
+        1,
+        2,
+        2,
+        2,
+        2,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/Users/Louie/Documents/Programming/gif_overflow/app/models/gifcomment.rb": [
+        1,
+        1,
+        1,
+        1,
+        null
+      ],
+      "/Users/Louie/Documents/Programming/gif_overflow/app/controllers/gifs_controller.rb": [
+        1,
+        null,
+        1,
+        2,
+        2,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        2,
+        2,
+        2,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/Users/Louie/Documents/Programming/gif_overflow/app/models/gif.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null
+      ]
+    },
+    "timestamp": 1385059581
+  }
+}
