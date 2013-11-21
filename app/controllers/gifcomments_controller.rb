@@ -1,4 +1,4 @@
-class GifsCommentController < ApplicationController
+class GifcommentsController < ApplicationController
   def index
   end
 
