@@ -6794,8 +6794,18 @@ button.close {
   width: 100%;
 }
 
+<<<<<<< HEAD
 .carousel-inner > .next {
   left: 100%;
+=======
+#our_title {
+  text-decoration: none;
+  color: black;
+}
+
+#company_name {
+  display: inline;
+>>>>>>> create_user
 }
 
 .carousel-inner > .prev {
