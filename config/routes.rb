@@ -1,7 +1,10 @@
 GifOverflow::Application.routes.draw do
 
   root :to => 'gifs#index'
-  resources :gifs
+
+  resources :gifs do
+    resources :gifcomments
+  end
 
 
   # The priority is based upon order of creation:
