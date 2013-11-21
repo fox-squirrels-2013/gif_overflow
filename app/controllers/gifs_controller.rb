@@ -7,11 +7,11 @@ class GifsController < ApplicationController
 
   def create
     @gif = Gif.create(params[:gif])
-    redirect_to gifs_path
+    render json: @gif
   end
 
   def show
-    p @gif = Gif.find(params[:id])
+    @gif = Gif.find(params[:id])
     @gifcomment = Gifcomment.new
     @gifshow = Gifcomment.where("gif_id = #{@gif.id}")
   end

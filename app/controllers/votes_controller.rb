@@ -1,10 +1,10 @@
 class VotesController < ApplicationController
   def create
-    @vote = Vote.create
-    @gif = Gif.find(params[:gif_id])
-    @gif.votes << @vote
-    redirect_to gifs_path
+    vote = Vote.create
+    gif = Gif.find(params[:gif_id])
+    gif.votes << vote
 
+    render json: { voteCount: gif.votes.count }
   end
 
   def destroy
