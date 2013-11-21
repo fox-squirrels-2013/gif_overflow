@@ -11,7 +11,7 @@ class GifsController < ApplicationController
   end
 
   def show
-    p @gif = Gif.find(params[:id])
+    @gif = Gif.find(params[:id])
     @gifcomment = Gifcomment.new
     @gifshow = Gifcomment.where("gif_id = #{@gif.id}")
   end

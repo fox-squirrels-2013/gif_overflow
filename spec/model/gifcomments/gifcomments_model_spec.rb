@@ -1,10 +1,8 @@
 require "spec_helper"
 
-describe "Gifcomment" do
+describe Gifcomment do
   
-  it "should not create without a link" do
-    p Gifcomment.create()
-    expect(Gif.count).to eq(0)
-  end
+  it { should belong_to(:gif) }
+  it { should validate_presence_of(:link) }
 
 end
