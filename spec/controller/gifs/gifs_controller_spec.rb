@@ -1,3 +1,5 @@
+  require 'spec_helper'
+
   describe "Upvoting" do
     it "increases the Vote Count by one" do
       gif_to_upvote = Gif.create()
