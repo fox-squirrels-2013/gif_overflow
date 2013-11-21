@@ -140,8 +140,8 @@ DEPENDENCIES
   capybara
   coffee-rails (~> 3.2.1)
   database_cleaner
-  factory_girl
   debugger
+  factory_girl
   jquery-rails
   pg
   rails (= 3.2.13)
