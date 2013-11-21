@@ -1,9 +1,12 @@
+<div class="index_view">
 
-<div class="index">
   <h2>Welcome to GIFS</h1>
 
-    <%= render 'form' %>
+    <p><%= render 'form' %></p>
 
+    <% @gifs.each do |gif| %>
+      <button type="button" class="btn_upvote">Upvote</button><%= link_to "#{gif.title}", gif_path(gif.id) %>
+    <% end %>
 
 </div>
 
