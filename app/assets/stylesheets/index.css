@@ -17,6 +17,11 @@
   /*display: block;*/
 }
 
+#our_title {
+  text-decoration: none;
+  color: black;
+}
+
 #company_name {
   display: inline;
 }
