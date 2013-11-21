@@ -7,7 +7,7 @@ class GifsController < ApplicationController
 
   def create
     @gif = Gif.create(params[:gif])
-    redirect_to gifs_path
+    render json: @gif
   end
 
   def show
