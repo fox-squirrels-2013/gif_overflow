@@ -29,7 +29,9 @@ describe GifsController, :type => :controller do
 
   describe 'Routes' do
     it { should route(:get, '/gifs/1').to(:action => :show, :id => 1)}
-    it { should route(:get, '/gifs').to('/') }
+    it { should route(:post, '/gifs').to(:action => :create) }
+    it { should route(:get, '/').to(:action => :index) }
+
   end
 
 end
