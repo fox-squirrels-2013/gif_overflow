@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131120225703) do
+ActiveRecord::Schema.define(:version => 20131121024317) do
 
   create_table "gifcomments", :force => true do |t|
     t.string   "link"
@@ -23,7 +23,12 @@ ActiveRecord::Schema.define(:version => 20131120225703) do
   create_table "gifs", :force => true do |t|
     t.string   "title"
     t.string   "link"
-    t.integer  "vote_count"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "votes", :force => true do |t|
+    t.integer  "gif_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
