@@ -7,8 +7,8 @@
   <ul>
     <% @gifs.each do |gif| %>
       <li>
-        <%= button_to "Like", gif_votes_path(gif), :remote => true %>
         <%= link_to "#{gif.title}", gif_path(gif) %>
+        <%= button_to "Like", gif_votes_path(gif), :remote => true %>
       </li>
     <% end %>
   </ul>
