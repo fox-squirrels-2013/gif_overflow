@@ -1,12 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>GifOverflow</title>
+  <title>Gif Overflow</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+
+  <div id="nav">
+    <header>
+      <h1 id="company_name">Gif Overflow</h1>
+    </header>
+    <ul class="nav_list">
+      <li id="nav_item"><a href=#>About</a></li>
+      <li id="nav_item"><a href=#>Login</a></li>
+      <li id="nav_item"><a href=#>Sign up</a></li>
+    </ul>
+  <div>
 
 <%= yield %>
 
