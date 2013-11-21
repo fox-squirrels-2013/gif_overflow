@@ -1,0 +1,33 @@
+/**** Nav Bar *************/
+
+.nav {
+  position: relative;
+  display: block;
+}
+
+#company_name {
+  display: inline;
+}
+
+header {
+  display: inline;
+}
+
+.nav_list {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: inline;
+  list-style: none;
+  margin-right: 18px;
+}
+
+#nav_item {
+  display: inline;
+}
+
+/**** Index Page *************/
+
+.index {
+  position: absolute;
+}

@@ -1,5 +1,7 @@
 class GifsController < ApplicationController
+
   def index
+    @gif = Gif.all
   end
 
   def create
