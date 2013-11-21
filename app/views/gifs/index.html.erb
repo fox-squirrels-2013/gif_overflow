@@ -1,9 +1,9 @@
+
 <div class="index">
   <h2>Welcome to GIFS</h1>
 
-    <% @gifs.each do |gif| %>
-      <p> <%= link_to "gif.title", gif_path(gif.id) %>
-         <!-- <%= link_to #{}"#{}" %> -->
-      </p>
-    <% end %>
+    <%= render 'form' %>
+
+
 </div>
+
