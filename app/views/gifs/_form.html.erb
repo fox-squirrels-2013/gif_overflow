@@ -1,5 +1,5 @@
 <%= form_for @gif, :remote => true do |f| %>
   <%= f.text_field :title, :placeholder => "Title" %>
   <%= f.text_field :link, :placeholder => "Image URL"%>
-  <%= f.submit "Submit Gif" %>
+  <%= f.submit :class => "btn btn-primary btn-xs", :value => "Submit Gif" %>
 <% end %>

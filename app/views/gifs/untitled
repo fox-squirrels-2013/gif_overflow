@@ -1,0 +1,25 @@
+
+<%= link_to "#{gif.title}", gif_path(gif) %>
+
+<% @gifshow.each do |gif| %>
+  <p><img src=<%= gif.link %> ></p>
+<% end %>
+
+
+<!-- new -->
+
+<img src=<%= gif.link %> alt=<%= gif.title %> href=<%= gif.link %> height="265" width="265">
+
+
+=======
+  <h2>Welcome to GIFS</h1>
+  <p><%= render 'form' %></p>
+  <ul>
+    <% @gifs.each do |gif| %>
+      <li>
+        <%= button_to "Like", gif_votes_path(gif), :remote => true %>
+        <%= link_to "#{gif.title}", gif_path(gif) %>
+      </li>
+    <% end %>
+  </ul>
+>>>>>>> master
