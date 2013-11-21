@@ -1,0 +1,24 @@
+
+<div class="container">
+  <div id="show_view">
+
+    <h2><%= @gif.title %></h2>
+
+    <p><img src=<%= @gif.link %> ></p>
+
+    <p>
+    <%= form_for [@gif, @gifcomment] do |f| %>
+      <%= hidden_field_tag 'gif_id', @gif.id %>
+      <%= f.text_field :link, :placeholder => "Your response URL", :value => nil %>
+      <%= f.submit "Submit Your Gif" %>
+    <% end %>
+    </p>
+
+    <% @gifshow.each do |gif| %>
+      <p><img src=<%= gif.link %> ></p>
+    <% end %>
+
+
+
+  </div>
+</div>
