@@ -10,6 +10,12 @@ GifOverflow::Application.routes.draw do
     resources :votes, only: [:create, :destroy]
   end
 
+  resources :users
+
+  match '/signup',  to: 'users#new'
+  match '/login',   to: 'sessions#new'
+  match '/logout',  to: 'sessions#destroy', via: :delete
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

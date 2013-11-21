@@ -517,6 +517,10 @@ h3 {
   margin-bottom: 10px;
 }
 
+h3 {
+  margin-top: 5px;
+}
+
 h1 small,
 h2 small,
 h3 small,
@@ -7653,3 +7657,23 @@ legend {
 .affix {
   position: fixed;
 }
+
+/*** MY OWN ****************/
+
+#index_gif {
+  padding-bottom: 10px;
+}
+
+#index_gif {
+  list-style-type: none;
+  display:inline-block;
+  padding-right: 20px;
+}
+
+h2 {
+  margin-top: 0;
+  padding-bottom: 5px;
+}
+
+
+
