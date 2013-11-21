@@ -7,12 +7,5 @@ class Gif < ActiveRecord::Base
   attr_accessible :title, :link
 
 
-  # def init
-  #   self.vote_count = 0
-  # end
-
-  # def upvote
-  #   self.vote_count += 1
-  # end
 
 end

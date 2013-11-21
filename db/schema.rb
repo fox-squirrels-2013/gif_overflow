@@ -28,7 +28,6 @@ ActiveRecord::Schema.define(:version => 20131121024317) do
   end
 
   create_table "votes", :force => true do |t|
-    t.integer  "vote_count"
     t.integer  "gif_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false

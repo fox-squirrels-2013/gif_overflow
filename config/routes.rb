@@ -6,6 +6,9 @@ GifOverflow::Application.routes.draw do
     resources :gifcomments
   end
 
+  resources :gifs, only: [] do
+    resources :votes, only: [:create, :destroy]
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

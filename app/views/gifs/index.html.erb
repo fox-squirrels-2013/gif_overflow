@@ -4,12 +4,16 @@
 
   <h2>Welcome to GIFS</h1>
   <p><%= render 'form' %></p>
-
-  <% @gifs.each do |gif| %>
-    <button type="button" class="btn_upvote">Upvote</button>
-    <%= link_to "#{gif.title}", gif_path(gif.id) %>
-  <% end %>
-
+  <ul>
+    <% @gifs.each do |gif| %>
+      <li>
+        <%= button_to "Like", gif_votes_path(gif) %>
+        <%= link_to "#{gif.title}", gif_path(gif) %>
+      </li>
+    <% end %>
+  </ul>
 
   </div>
 </div>
+
+
