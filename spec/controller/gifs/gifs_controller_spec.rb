@@ -4,7 +4,7 @@ describe GifsController, :type => :controller do
  
   describe '#index' do
     before(:each) do
-      Gif.create(title: 'Hello', link: 'Goodbye')
+      # Gif.create(title: 'Hello', link: 'Goodbye')
       get :index
     end
     it { should respond_with(:success) }
