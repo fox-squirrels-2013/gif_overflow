@@ -6,8 +6,8 @@ class GifsController < ApplicationController
   end
 
   def create
-    @gif = Gif.create(params[:gif])
-    render json: @gif
+    gif = Gif.create(params[:gif])
+    render json: { gif_add: render_to_string(partial: "postgif", :locals => {:gif => gif}) }
   end
 
   def show
@@ -20,3 +20,4 @@ class GifsController < ApplicationController
   end
 
 end
+
