@@ -7672,11 +7672,12 @@ legend {
 
 #index_gif {
   padding-bottom: 10px;
+  display:inline-block;
+  width:auto;
 }
 
-#index_gif {
+.index_gifs {
   list-style-type: none;
-  display:inline-block;
   padding-right: 20px;
 }
 
