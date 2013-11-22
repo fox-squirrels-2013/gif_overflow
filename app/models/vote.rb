@@ -1,9 +1,9 @@
 class Vote < ActiveRecord::Base
 
-  attr_accessible :gif_id
+  attr_accessible :gif_id, :user_id
 
   belongs_to :gif
-  validates :gif_id, presence: true
-  # Belongs to user
+  belongs_to :user
+  validates :gif_id, :user_id, presence: true
 
 end
