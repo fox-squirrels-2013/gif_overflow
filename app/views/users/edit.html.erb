@@ -5,13 +5,13 @@
 </div>
 
 <% if is_user? %>
-   <%= form_for @user do |f| %>
-     <%= f.text_field :email, :value => nil, :placeholder => "New email here" %><br />
-     <%= f.password_field :password, :placeholder => "Update password" %><br />
-     <%= f.submit("Update") %>
-   <% end %>
- <% else %>
-   <p>
-     You can only edit your own profile.
-   </p>
- <% end %>
+  <%= form_for @user do |f| %>
+    <%= f.text_field :email, :value => nil, :placeholder => "New email here" %><br />
+    <%= f.password_field :password, :placeholder => "Update password" %><br />
+    <%= f.submit("Update") %>
+  <% end %>
+<% else %>
+  <p>
+    You can only edit your own profile.
+  </p>
+<% end %>
