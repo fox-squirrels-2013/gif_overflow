@@ -1,5 +1,8 @@
 class SessionsController < ApplicationController
-   def new; end
+  def new
+    p '*'*100
+    p session[:current_user_id]
+  end
 
    def create
      @user = User.find_by_username(params[:session][:username])
@@ -13,7 +16,9 @@ class SessionsController < ApplicationController
    end
 
    def destroy
-     session[:current_user_id] = nil
-     redirect_to login_path, :notice => "Logged out!"
+    reset_session
+    p '*'*100
+    p session[:current_user_id]
+    redirect_to login_path, :notice => "Logged out!"
    end
  end
