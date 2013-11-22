@@ -12,17 +12,18 @@
     <p><img src=<%= @gif.link %> ></p>
 
     <p>
-    <%= form_for [@gif, @gifcomment] do |f| %>
+    <%= form_for [@gif, @gifcomment], :remote => true do |f| %>
       <%= hidden_field_tag 'gif_id', @gif.id %>
       <%= f.text_field :link, :placeholder => "Your response URL", :value => nil %>
       <%= f.submit "Submit Your Gif" %>
     <% end %>
     </p>
 
+   <ul class="respond_gif">
     <% @gifshow.each do |gif| %>
-      <p><img src=<%= gif.link %> ></p>
+      <li><img src=<%= gif.link %> > </li>
     <% end %>
-
+  </ul>
 
 
   </div>
