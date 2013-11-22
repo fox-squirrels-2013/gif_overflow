@@ -43,9 +43,14 @@
           </form>
 
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="/login">Login</a></li>
-            <li><a href="/logout" data-method='delete'>Logout</a></li>
-            <li><a href="/signup">Sign Up</a></li>
+            <% if current_user %>
+              <li><a href="/users/">Homepage</a></li>
+              <li><a href="/users/#">Settings</a></li>
+              <li><a href="/logout" data-method='delete'>Logout</a></li>
+            <% else %>
+              <li><a href="/login">Login</a></li>
+              <li><a href="/signup">Sign Up</a></li>
+            <% end %>
           </ul>
 
         </div>
