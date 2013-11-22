@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131122221932) do
+ActiveRecord::Schema.define(:version => 20131122225718) do
 
   create_table "gifcomments", :force => true do |t|
     t.string   "link"
@@ -42,6 +42,7 @@ ActiveRecord::Schema.define(:version => 20131122221932) do
     t.integer  "user_id"
   end
 
+  add_index "votes", ["gif_id", "user_id"], :name => "index_votes_on_gif_id_and_user_id", :unique => true
   add_index "votes", ["user_id"], :name => "index_votes_on_user_id"
 
 end
