@@ -20,11 +20,7 @@
     <ul class="index_gifs">
       <% @gifs.each do |gif| %>
 
-        <li id="index_gif">
-          <h5><%= link_to "#{gif.title}", gif_path(gif) %></h5>
-          <%= button_to "Like", gif_votes_path(gif), :remote => true %>
-          <img src=<%= gif.link %> alt=<%= gif.title %> href=<%= gif.link %> height="265" width="265">
-        </li>
+      <%= render partial: 'postgif', locals: {gif: gif} %>
 
       <% end %>
     </ul>
