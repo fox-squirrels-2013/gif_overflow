@@ -1,0 +1,12 @@
+<h2>User Profile</h2>
+
+<p>
+  Username: <%= @user.username %> <br>
+  Email: <%= @user.email %>
+</p>
+
+  <% if is_user? %>
+  <p>
+    <%= link_to "Update Info", edit_user_path %>
+  </p>
+<% end %>
