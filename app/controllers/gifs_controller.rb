@@ -17,8 +17,5 @@ class GifsController < ApplicationController
     @gifshow = Gifcomment.where("gif_id = #{@gif.id}")
   end
 
-  def update
-  end
-
 end
 
