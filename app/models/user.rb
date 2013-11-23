@@ -4,6 +4,10 @@ class User < ActiveRecord::Base
 
   has_secure_password
 
+  has_many :gifs
+  has_many :gifcomments
+  has_many :votes
+
   validates :username, :email, :password, presence: true
   validates :username, :email, uniqueness: true
 
@@ -12,4 +16,4 @@ class User < ActiveRecord::Base
 
   #User has many votes, comments, gifs
 
- end
+end

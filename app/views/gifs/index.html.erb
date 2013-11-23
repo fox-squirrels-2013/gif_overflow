@@ -1,20 +1,25 @@
-<div class="container">
-  <div id="index_view">
-  <h2>Welcome to GIFS</h1>
-  </div>
-</div>
 
-</div>
-  <div class="col-lg-4">
-    <div class="well well-sm">
+<% if current_user %>
+  <div class="container">
+    <div class="well well-lg">
       <h3>Submit your own</h3>
       <p><%= render 'form' %></p>
     </div>
   </div>
-</div>
-</div>
+<% else %>
+  <div class="container">
+    <div class="bs-example">
+      <div class="jumbotron">
+        <h1>Gif Overflow</h1>
+        <p>Never read a stupid comment again. All gifs. All day.</p>
+        <a class="btn btn-primary btn-lg" href="/signup">Sign me up</a>
+      </div>
+    </div>
+  </div>
+<% end %>
 
-<div class="col-lg-4">
+
+<div class="container">
   <div class="well well-lg">
     <h3>GIF Overload</h3>
     <ul class="index_gifs">
@@ -26,9 +31,6 @@
     </ul>
   </div>
 </div>
-
-
-
 
 
 

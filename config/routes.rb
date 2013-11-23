@@ -12,6 +12,7 @@ GifOverflow::Application.routes.draw do
 
   resources :users
 
+  match '/users/:user_id/gifs',   to: 'user#gifs'
   match '/signup',   to: 'users#new'
   match '/sessions', to: 'sessions#create'
   match '/login',    to: 'sessions#new'
