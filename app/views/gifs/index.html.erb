@@ -18,6 +18,7 @@
   <div class="well well-lg">
     <h3>GIF Overload</h3>
     <ul class="index_gifs">
+
       <% @gifs.each do |gif| %>
 
       <%= render partial: 'postgif', locals: {gif: gif} %>
