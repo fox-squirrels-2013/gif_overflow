@@ -16,4 +16,4 @@ class User < ActiveRecord::Base
 
   #User has many votes, comments, gifs
 
- end
+end
