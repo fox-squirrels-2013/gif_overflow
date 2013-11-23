@@ -5,15 +5,12 @@ $(document).ready(
 );
 
 function bindListeners() {
-
   $('.index_gifs').on('ajax:success', 'li', ajaxvote) //placed event listener on class ul and its children
   $('#new_gif').on('ajax:success', ajaxgif)
   $('.new_gifcomment').on('ajax:success', gifresponse) // placed event listener on form
-
 }
 
 function ajaxvote(e, response, textStatus) {
-
   $(this).closest('li').find('span').remove() //checks to see if there was already a span tag, if so, deletes it.
   $(this).closest('li').find('a').after('<span>'+response.voteCount+'</span>')
 
@@ -28,4 +25,6 @@ function ajaxgif(e, response, textStatus) {
 function gifresponse(e, response, textStatus) {
   $('ul.respond_gif').append('<img src='+response.link+'>')
 }
+
+
 
