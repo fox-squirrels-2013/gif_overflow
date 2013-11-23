@@ -4,15 +4,17 @@
   </div>
 </div>
 
-</div>
-  <div class="col-lg-4">
-    <div class="well well-sm">
-      <h3>Submit your own</h3>
-      <p><%= render 'form' %></p>
+<% if current_user %>
+  </div>
+    <div class="col-lg-4">
+      <div class="well well-sm">
+          <h3>Submit your own</h3>
+          <p><%= render 'form' %></p>
+      </div>
     </div>
   </div>
-</div>
-</div>
+  </div>
+<% end %>
 
 <div class="col-lg-4">
   <div class="well well-lg">

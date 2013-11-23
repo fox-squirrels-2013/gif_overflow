@@ -44,8 +44,8 @@
 
           <ul class="nav navbar-nav navbar-right">
             <% if current_user %>
-              <li><a href="/users/">Homepage</a></li>
-              <li><a href="/users/#">Settings</a></li>
+              <li><a href="/users/<%= @current_user.id %>"><%= @current_user.username %></a></li>
+              <li><a href="/users/<%= @current_user.id %>/edit">Settings</a></li>
               <li><a href="/logout" data-method='delete'>Logout</a></li>
             <% else %>
               <li><a href="/login">Login</a></li>

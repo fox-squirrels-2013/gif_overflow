@@ -1,8 +1,18 @@
-<h2>Users</h2>
-<% @users.each do |user| %>
-  <p>
-    <%= user.username %>
-    <%= user.email %>
-    <%= link_to "profile", user_path(user.id) %>
-  </p>
-<% end %>
+<div class="container">
+  <div id="index_view">
+  <h2>Welcome to GIFS</h1>
+  </div>
+</div>
+
+<div class="col-lg-4">
+  <div class="well well-lg">
+    <h2>Users</h2>
+    <% @users.each do |user| %>
+      <p>
+        <%= user.username %>
+        <%= user.email %>
+        <%= link_to "profile", user_path(user.id) %>
+      </p>
+    <% end %>
+ </div>
+</div>

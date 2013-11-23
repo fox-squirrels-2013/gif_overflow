@@ -1,13 +1,25 @@
-<h2>User Profile</h2>
+<div class="container">
+  <div id="index_view">
+  <h2>Welcome to GIFS</h1>
+  </div>
+</div>
 
-<p>
-  Username: <%= @user.username %> <br>
-  Email: <%= @user.email %>
-</p>
+<div class="col-lg-4">
+  <div class="well well-lg">
 
-<% if is_user? %>
-<p>
-  <%= link_to "Update Info", edit_user_path %>
-</p>
+    <h2>Your Gifs</h2>
 
-<% end %>
+
+
+
+
+
+
+    <% if is_user? %>
+    <p>
+      <%= link_to "Update Info", edit_user_path %>
+    </p>
+
+    <% end %>
+ </div>
+</div>
