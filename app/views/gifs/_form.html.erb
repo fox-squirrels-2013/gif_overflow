@@ -1,5 +1,13 @@
 <%= form_for @gif, :remote => true do |f| %>
-  <%= f.text_field :title, :placeholder => "Title" %>
-  <%= f.text_field :link, :placeholder => "Image URL"%>
-  <%= f.submit :class => "btn btn-primary btn-xs", :value => "Submit Gif" %>
+	<div class="col-lg-10" id="input_pad">
+  <%= f.text_field :title, :placeholder => "Title", class: "form-control" %>
+	</div>
+
+  <div class="col-lg-10" id="input_pad">
+  <%= f.text_field :link, :placeholder => "Image URL", class: "form-control"%>
+	</div>
+
+  <div class="col-lg-10 col-lg-offset-2" >
+    <button type="submit" class="btn btn-primary" >Submit Gif</button>
+	</div>
 <% end %>
