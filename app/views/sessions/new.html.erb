@@ -1,27 +1,24 @@
-<div class="container">
+<div class="container" id="add_margin">
   <div class="well well-lg" id="well_center">
     <div class="form-group">
 
-
-    <div class="container">
-      <div class="centered">
-        <%= image_tag('key.svg', id: "icon_center") %>
-      </div>
+    <div class="key" style="text-align:center" >
+      <%= image_tag('key.svg', id: "icon_center") %>
     </div>
 
-    <h2 id="signin_update">Log in</h2>
+    <h2 class="li_margin" id="signin_update">Log in</h2>
 
     <%= form_tag('/sessions') do %>
 
-      <div class="col-lg-10">
-        <%= label_tag :username %><br />
-        <%= text_field_tag :username, params[:username], class: "form-control", id: "inputEmail" %>
+      <div class="col-lg-10" id="input_pad">
+    
+        <%= text_field_tag :username, params[:username], :placeholder => "Username", class: "form-control", id: "inputEmail" %>
       </div>
 
-      <div class="col-lg-10">
-        <%= label_tag :password %><br />
-        <%= password_field_tag :password, params[:password], class: "form-control", id: "inputPassword" %>
-      </div><br>
+      <div class="col-lg-10" id="input_pad">
+        
+        <%= password_field_tag :password, params[:password], :placeholder => "Password", class: "form-control", id: "inputPassword" %>
+      </div>
 
       <div class="col-lg-10 col-lg-offset-2">
       <button type="submit" class="btn btn-primary">Submit</button>

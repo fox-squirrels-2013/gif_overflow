@@ -7736,4 +7736,25 @@ h1 {
   position: absolute;
 }
 
+/*** Login ************/
+
+.key {
+  margin-bottom: 15px;
+}
+
+#add_margin {
+  width: 50%;
+}
+
+.li_margin {
+  margin-bottom: 20px;
+}
+
+#btn_upd {
+  float: right;
+}
+
+#input_pad {
+  margin-bottom: 7px;
+}
 
