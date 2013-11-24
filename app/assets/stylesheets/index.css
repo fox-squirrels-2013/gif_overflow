@@ -7720,10 +7720,10 @@ h1 {
 }
 
 .jumbotron {
-  background-image: url("gifoverflow2.png");
+  background-image: url("gif_update.png");
   background-position:left;
   background-repeat: no-repeat;
-  background-size:150px 250px;
+  background-size:190px 250px;
 }
 
 /*** Nav bar ************/
