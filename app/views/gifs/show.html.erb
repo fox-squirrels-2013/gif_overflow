@@ -13,13 +13,10 @@
       <%= f.submit "Submit Your Gif" %>
     <% end %>
     </p>
+    <div id='rendergifcomments'>
 
-   <ul class="respond_gif">
-    <% @gifshow.each do |gif| %>
-      <li><img src=<%= gif.link %> > </li>
-    <% end %>
-  </ul>
+      <%= render partial: 'postgifcomments', locals: {gifshow: @gifshow} %>
 
-
+    </div>
   </div>
 </div>
