@@ -44,7 +44,6 @@ ActiveRecord::Schema.define(:version => 20131123022421) do
     t.integer  "user_id"
   end
 
-  add_index "votes", ["gif_id", "user_id"], :name => "index_votes_on_gif_id_and_user_id", :unique => true
   add_index "votes", ["user_id"], :name => "index_votes_on_user_id"
 
 end

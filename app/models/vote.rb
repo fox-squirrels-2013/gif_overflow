@@ -4,6 +4,6 @@ class Vote < ActiveRecord::Base
 
   belongs_to :gif
   belongs_to :user
-  validates :gif_id, :user_id, presence: true
+  validates :gif_id, presence: true
 
 end
