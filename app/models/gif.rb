@@ -4,6 +4,7 @@ class Gif < ActiveRecord::Base
 
   has_many :gifcomments
   has_many :votes
+  belongs_to :user
 
   validates :title, :link, :user_id, presence: true
 
