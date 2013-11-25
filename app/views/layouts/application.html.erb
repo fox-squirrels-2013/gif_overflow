@@ -2,14 +2,19 @@
 <html>
 <head>
   <title>Gif Overflow</title>
+  <link rel="shortcut icon" href="giffy_new.ico" type="image/x-icon">
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+  <link href='http://fonts.googleapis.com/css?family=Acme' rel='stylesheet' type='text/css'>
 </head>
 <body>
   <div class="navbar navbar-default navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
+
+          <img id="giffy" src="gifoverflow2.png" height="55" width="40">
+
           <a href="../" class="navbar-brand">Gif Overflow</a>
           <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
             <span class="icon-bar"></span>
@@ -46,10 +51,10 @@
             <% if current_user %>
               <li><a href="/users/<%= @current_user.id %>"><%= @current_user.username %></a></li>
               <li><a href="/users/<%= @current_user.id %>/edit">Settings</a></li>
-              <li><a href="/logout" data-method='delete'>Logout</a></li>
+              <li><a id="rmv_padding" href="/logout" data-method='delete'>Logout</a></li>
             <% else %>
               <li><a href="/login">Login</a></li>
-              <li><a href="/signup">Sign Up</a></li>
+              <li><a id="rmv_padding" href="/signup">Sign Up</a></li>
             <% end %>
           </ul>
 
