@@ -7,6 +7,9 @@ class Gif < ActiveRecord::Base
   belongs_to :user
 
   validates :title, :link, :user_id, presence: true
+  validates :link, format: { with: %r{\.(gif|jpn|png)$}i,
+  					message: 'must be a URL for GIF, JPG, or PNG image.'
+	  				}
 
   #Validate for a link
 
