@@ -1,6 +1,6 @@
 class Gifcomment < ActiveRecord::Base
 
-  attr_accessible :link, :gif_id, :user_id
+  attr_accessible :link
 
   belongs_to :gif
   belongs_to :user

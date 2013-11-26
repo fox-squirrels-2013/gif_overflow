@@ -1,5 +1,7 @@
+// filename is too long
  <ul class="respond_gif">
     <% @gifcomments.each do |gif| %>
+      # use image_tag
       <li><img src=<%= gif.link %> ></li>
     <%end%>
 </ul>

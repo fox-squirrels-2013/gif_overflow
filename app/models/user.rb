@@ -1,8 +1,8 @@
 class User < ActiveRecord::Base
+  has_secure_password
 
   attr_accessible :username, :email, :password
 
-  has_secure_password
 
   has_many :gifs
   has_many :gifcomments

@@ -1,10 +1,14 @@
 class GifcommentsController < ApplicationController
 
   def create
-    @gifcomment = Gifcomment.create(gif_id: params[:gif_id], link: params[:gifcomment][:link])
-    @gifcomments = Gifcomment.all
+    @gif = Gif.find params[:gif_id]
+    @comment = @gif.gifcomments.build params[:gifcomment]
+    if @comment.save
+      render json: { gifcomment_add: render_to_string(partial: "postgifcomments", :locals => {:gifcomments => Gifcomment.all}) }
+    else
+      # do something
+    end
 
-    render json: { gifcomment_add: render_to_string(partial: "postgifcomments", :locals => {:gifcomments => @gifcomments}) }
   end
 
 end

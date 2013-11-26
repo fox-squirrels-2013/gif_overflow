@@ -9,13 +9,13 @@
     <p>
     <%= form_for [@gif, @gifcomment], :remote => true do |f| %>
       <%= hidden_field_tag 'gif_id', @gif.id %>
-      <%= f.text_field :link, :placeholder => "Your response URL", :value => nil %>
+      <%= f.text_field :link, :placeholder => "Your response URL" %>
       <%= f.submit "Submit Your Gif" %>
     <% end %>
     </p>
     <div id='rendergifcomments'>
 
-      <%= render partial: 'postgifcomments', locals: {gifshow: @gifshow} %>
+      <%= render 'gifcomments/postgifcomments', gifshow: @comments %>
 
     </div>
   </div>

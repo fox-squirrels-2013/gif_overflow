@@ -6,11 +6,14 @@ class Gif < ActiveRecord::Base
   has_many :votes
   belongs_to :user
 
-  validates :title, :link, :user_id, presence: true
+  validates :title, :link, :user, presence: true
   validates :link, format: { with: %r{\.(gif|jpn|png)$}i,
   					message: 'must be a URL for GIF, JPG, or PNG image.'
 	  				}
 
-  #Validate for a link
+
+  def self.by_vote_count_and_create_at
+    self.all.sort_by { |gif| [gif.votes.count,  -gif.created_at.to_f] }.reverse
+  end
 
 end

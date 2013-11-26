@@ -1,3 +1,5 @@
+// you're poluting the global namespace
+// you can use object literal, constructor functions, modules
 $(document).ready(
 
   bindListeners
@@ -5,21 +7,16 @@ $(document).ready(
 );
 
 function bindListeners() {
-$('#new_gif').on('ajax:success', ajaxgif)
-$('div#rendergif').on('ajax:success', 'ul', ajaxvote)
-$('.new_gifcomment').on('ajax:success', ajaxgifcomment)
+  $('#new_gif').on('ajax:success', ajaxgif)
+  $('div#rendergif').on('ajax:success', 'ul', ajaxgif)
+  $('.new_gifcomment').on('ajax:success', ajaxgifcomment)
 }
 
 
-function ajaxgif(e, response, textStatus) {
-  $('div#rendergif').html(response.gif_add)
+function ajaxgif(e, response) {
+  $('div#rendergif').html(response)
 }
 
-function ajaxvote(e, response, textStatus) {
-  $('div#rendergif').html(response.vote_add)
-}
-
-function ajaxgifcomment(e, response, textStatus) {
-
+function ajaxgifcomment(e, response) {
   $('div#rendergifcomments').html(response.gifcomment_add)
 }

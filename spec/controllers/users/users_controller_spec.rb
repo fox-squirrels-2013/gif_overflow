@@ -10,6 +10,11 @@ describe UsersController, :type => :controller do
   end
 
   describe '#create' do
+    it "creates a user with valid params" do
+      expect {
+        post :create, username: "Tester", email: "Tester@test.com", password_digest: "password"
+      }.to change { User.count }.by(1)
+    end
     before(:each) do
       post :create, username: "Tester", email: "Tester@test.com", password_digest: "password"
     end

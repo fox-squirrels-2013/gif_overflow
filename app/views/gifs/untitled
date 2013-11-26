@@ -1,4 +1,4 @@
-
+I love this file.
 <%= link_to "#{gif.title}", gif_path(gif) %>
 
 <% @gifshow.each do |gif| %>
